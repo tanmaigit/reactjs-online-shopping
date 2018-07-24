@@ -1,15 +1,15 @@
 import { GET_PRODUCT } from '../constants/actions';
 
 const initialState = {
-  products: []
+	products: []
 };
 
 const productReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case GET_PRODUCT:
-      return { products: action.payload };
-    default:
-      return state;
-  }
+	switch (action.type) {
+		case GET_PRODUCT:
+			return { products: action.payload };
+		default:
+			return state;
+	}
 };
 export default productReducer;
