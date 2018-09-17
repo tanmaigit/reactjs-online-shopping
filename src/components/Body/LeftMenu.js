@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopHeader = () => (
 	<div>
-	<nav className="navbar navbar-expand-md navbar-dark bg-dark">
+	  <nav className="navbar navbar-expand-md navbar-dark bg-dark">
 		<div className="container">
 		  <a className="navbar-brand" href="index.html">Simple Ecommerce</a>
 		  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,13 +42,26 @@ const TopHeader = () => (
 			</form>
 		  </div>
 		</div>
-	</nav>
-	<section className="jumbotron text-center">
+	  </nav>
+	  <section className="jumbotron text-center">
 		<div className="container">
 		  <h1 className="jumbotron-heading">E-COMMERCE CATEGORY</h1>
 		  <p className="lead text-muted mb-0">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte...</p>
 		</div>
-	</section>
+	  </section>
+	  <div className="container">
+		<div className="row">
+		  <div className="col">
+			<nav aria-label="breadcrumb">
+			  <ol className="breadcrumb">
+				<li className="breadcrumb-item"><a href="index.html">Home</a></li>
+				<li className="breadcrumb-item"><a href="category.html">Category</a></li>
+				<li className="breadcrumb-item active" aria-current="page">Sub-category</li>
+			  </ol>
+			</nav>
+		  </div>
+		</div>
+	  </div>
 	</div>
 );
 export default TopHeader;
