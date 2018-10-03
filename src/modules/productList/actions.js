@@ -1,6 +1,6 @@
-import { GET_PRODUCT } from '../constants/actions';
+import * as action from './actionTypes';
 
-function getProducts(filter) {
+function getProductList(filter) {
 	return new Promise((resolve, reject) => {
 		const products = [
 			{ id: 'p1', name: '[Toyota]' + filter, price: '10000' },
@@ -11,10 +11,10 @@ function getProducts(filter) {
 	});
 }
 
-export const actionGetProducts = filter => {
+export const actionGetProductList = filter => {
 	return dispatch => {
-		getProducts(filter).then(response => {
-			dispatch({ type: GET_PRODUCT, payload: response });
+		getProductList(filter).then(response => {
+			dispatch({ type: action.GET_PRODUCT_LIST, payload: response });
 		});
 	};
 };

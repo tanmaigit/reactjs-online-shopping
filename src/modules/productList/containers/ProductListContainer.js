@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import Product from './Product';
-import { actionGetProducts } from '../../actions/product';
+import Product from '../components/Product';
+import { actionGetProductList } from '../actions';
 
-class ProductList extends React.Component {
+class ProductListContainer extends React.Component {
 	componentDidMount() {
-		this.props.getProducts('us');
+		this.props.getProductList('us');
 	}
 
 	render() {
@@ -18,14 +18,14 @@ class ProductList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	products: state.products
+	products: state.productList.products
 });
 
 const mapDispatchToProps = dispatch => ({
-	getProducts: filter => dispatch(actionGetProducts(filter))
+	getProductList: filter => dispatch(actionGetProductList(filter))
 });
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(ProductList);
+)(ProductListContainer);

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import store from './store';
 import Header from './components/Header/Header';
-import Body from './components/Body/Body';
+import MainRouter from './router';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
 	render() {
@@ -10,7 +11,9 @@ class App extends Component {
 			<Provider store={store}>
 				<div className="wrapper">
 					<Header />
-					<Body />
+					<Router>
+						<MainRouter />
+					</Router>
 				</div>
 			</Provider>
 		);

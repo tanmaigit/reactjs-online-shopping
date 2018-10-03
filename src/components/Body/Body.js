@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductList from './ProductList';
+import ProductListContainer from '../../modules/productList/containers/ProductListContainer';
 
 const Body = () => (
 	<div className="body">
@@ -41,7 +41,7 @@ const Body = () => (
 		  </div>
 		  <div className="col">
 			<div className="row">
-			  <ProductList />
+			  <ProductListContainer />
 			  <div className="col-12">
 				<nav aria-label="...">
 				  <ul className="pagination">
